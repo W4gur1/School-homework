@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caixa de Gordura Sustentável — Projeto Técnico-Científico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- grid overlay -->
+<div class="blueprint-grid" aria-hidden="true"></div>
+
+<!-- corner marks -->
+<div class="corner corner--tl" aria-hidden="true"></div>
+<div class="corner corner--tr" aria-hidden="true"></div>
+<div class="corner corner--bl" aria-hidden="true"></div>
+<div class="corner corner--br" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar__mark">
+    <span class="topbar__code">CG–SUST/2026</span>
+    <span class="topbar__title">Caixa de Gordura Sustentável</span>
+  </div>
+  <nav class="topbar__nav" id="nav">
+    <a href="#introducao">01 Introdução</a>
+    <a href="#justificativa">02 Justificativa</a>
+    <a href="#objetivos">03 Objetivos</a>
+    <a href="#midia">04 Registro</a>
+    <a href="#referencias">05 Referências</a>
+  </nav>
+  <button class="topbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="topo">
+    <div class="hero__text">
+      <p class="eyebrow">Projeto técnico-científico · Saneamento &amp; Sustentabilidade</p>
+      <h1 class="hero__title">Uma caixa de gordura<br>com material <em>sustentável</em>.</h1>
+      <p class="hero__lede">
+        Proposta de um modelo funcional, de baixo custo e baixo impacto ambiental
+        para retenção de resíduos gordurosos — pensado para residências e pequenos
+        estabelecimentos da cidade de Itajaí, Santa Catarina.
+      </p>
+      <div class="hero__meta">
+        <div class="hero__meta-item">
+          <span class="label">Local do estudo</span>
+          <span class="value">Itajaí — SC</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="label">Cenário</span>
+          <span class="value">2026</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="label">Área</span>
+          <span class="value">Saneamento básico</span>
+        </div>
+      </div>
+      <a href="#introducao" class="hero__scroll">
+        <span>Ler o estudo</span>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="hero__diagram" role="img" aria-label="Esquema animado de uma caixa de gordura: a água entra suja, a gordura sobe e se separa, a água sai limpa.">
+      <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" id="diagramSvg">
+
+        <!-- box body -->
+        <rect x="90" y="120" width="300" height="260" rx="6" class="tank-wall"/>
+        <rect x="90" y="120" width="300" height="260" rx="6" class="tank-fill"/>
+
+        <!-- internal baffle -->
+        <rect x="215" y="220" width="14" height="160" class="baffle"/>
+
+        <!-- grease layer -->
+        <rect x="96" y="126" width="288" height="34" class="grease-layer" id="greaseLayer"/>
+
+        <!-- inlet pipe -->
+        <rect x="10" y="150" width="90" height="26" class="pipe"/>
+        <text x="14" y="143" class="tag tag--in">ENTRADA</text>
+        <text x="14" y="200" class="tag-sub">água + gordura</text>
+
+        <!-- outlet pipe -->
+        <rect x="380" y="330" width="130" height="26" class="pipe"/>
+        <text x="386" y="323" class="tag tag--out">SAÍDA</text>
+        <text x="386" y="380" class="tag-sub">água tratada</text>
+
+        <!-- lid -->
+        <rect x="150" y="104" width="80" height="16" rx="2" class="lid"/>
+        <text x="150" y="94" class="tag-sub">tampa de inspeção</text>
+
+        <!-- flow dashes inlet -->
+        <path d="M20 163 H90" class="flow-path flow-path--in" />
+        <!-- flow dashes outlet -->
+        <path d="M390 343 H500" class="flow-path flow-path--out" />
+
+        <!-- grease bubbles rising -->
+        <g class="bubbles">
+          <circle cx="150" cy="330" r="5" class="bubble" style="--d:0s"/>
+          <circle cx="190" cy="360" r="4" class="bubble" style="--d:0.6s"/>
+          <circle cx="270" cy="340" r="6" class="bubble" style="--d:1.1s"/>
+          <circle cx="320" cy="365" r="4" class="bubble" style="--d:1.6s"/>
+          <circle cx="350" cy="330" r="5" class="bubble" style="--d:0.3s"/>
+          <circle cx="130" cy="355" r="3.5" class="bubble" style="--d:1.9s"/>
+        </g>
+
+        <!-- annotation lines -->
+        <line x1="384" y1="143" x2="440" y2="143" class="callout-line"/>
+        <text x="444" y="147" class="tag-sub">gordura retida</text>
+
+        <line x1="220" y1="300" x2="270" y2="270" class="callout-line"/>
+        <text x="274" y="274" class="tag-sub">chicana</text>
+
+      </svg>
+      <span class="diagram-caption">FIG. 01 — corte esquemático do dispositivo</span>
+    </div>
+  </section>
+
+  <!-- ============ INTRODUÇÃO ============ -->
+  <section class="doc-section" id="introducao">
+    <div class="doc-section__head">
+      <span class="doc-num">01</span>
+      <h2>Introdução</h2>
+    </div>
+    <div class="doc-section__body">
+      <p class="lead-line">O descarte inadequado de resíduos gordurosos é um problema frequente em áreas urbanas, causando impactos negativos ao meio ambiente e ao sistema de saneamento básico.</p>
+      <p>Em cidades em crescimento, como Itajaí, em Santa Catarina, esse problema tende a se intensificar devido ao aumento da geração de resíduos domésticos e comerciais.</p>
+      <p>Nesse contexto, a utilização de caixas de gordura torna-se fundamental para evitar o entupimento das redes de esgoto e a contaminação de corpos d'água. Esses dispositivos atuam na retenção de resíduos gordurosos, impedindo que eles avancem para o sistema de escoamento sanitário.</p>
+      <p>Apesar de sua importância, muitos modelos de caixas de gordura utilizados atualmente não consideram aspectos sustentáveis em sua construção e manutenção. Dessa forma, surge a necessidade de desenvolver soluções mais ecológicas, acessíveis e eficientes.</p>
+      <p>O presente trabalho aborda a criação de uma caixa de gordura sustentável, propondo melhorias em sua estrutura e funcionamento por meio do uso de materiais reutilizáveis ou de baixo impacto ambiental. A proposta também considera a facilidade de manutenção e o descarte adequado dos resíduos acumulados.</p>
+      <p>O estudo será situado no contexto urbano da cidade de Itajaí, considerando o cenário atual, no ano de 2026, marcado pela crescente preocupação com a sustentabilidade e a preservação ambiental.</p>
+    </div>
+  </section>
+
+  <!-- ============ JUSTIFICATIVA ============ -->
+  <section class="doc-section doc-section--alt" id="justificativa">
+    <div class="doc-section__head">
+      <span class="doc-num">02</span>
+      <h2>Justificativa</h2>
+    </div>
+    <div class="doc-section__body">
+      <p>A realização deste trabalho se justifica pela crescente necessidade de soluções que minimizem os impactos ambientais causados pelo descarte inadequado de resíduos domésticos e comerciais. A gordura despejada diretamente na rede de esgoto é um dos principais fatores responsáveis pelo entupimento de tubulações e pelo comprometimento do sistema de saneamento <span class="ref">(SABESP, 2021)</span>.</p>
+
+      <p>A relevância social do tema está diretamente relacionada à qualidade de vida da população. Problemas no sistema de esgoto podem gerar transtornos como mau cheiro, proliferação de pragas, contaminação ambiental e até riscos à saúde pública. Segundo o Ministério do Meio Ambiente <span class="ref">(2018)</span>, práticas adequadas de descarte de resíduos contribuem significativamente para a redução desses problemas.</p>
+
+      <p>No que diz respeito às contribuições do trabalho, espera-se apresentar uma proposta de caixa de gordura sustentável que seja funcional, de baixo custo e que utilize materiais menos agressivos ao meio ambiente, como recipientes reutilizados ou componentes recicláveis. Dessa forma, o projeto pode servir como modelo para residências e pequenos estabelecimentos, incentivando práticas mais conscientes e contribuindo para a redução dos impactos ambientais.</p>
+
+      <p>Além disso, o estudo pode ampliar a compreensão sobre a importância do tratamento correto de resíduos gordurosos, estimulando mudanças de comportamento na sociedade. Embora as caixas de gordura já sejam amplamente utilizadas, muitos modelos ainda não priorizam aspectos sustentáveis, como o uso de materiais recicláveis ou a redução de impactos ambientais <span class="ref">(BARBIERI, 2011)</span>. Isso evidencia a necessidade de inovação nessa área.</p>
+
+      <blockquote class="pull-quote">
+        <p>“A gestão ambiental eficaz depende da adoção de práticas sustentáveis que reduzam a geração de resíduos e promovam o reaproveitamento de materiais.”</p>
+        <cite>José Carlos Barbieri, 2011, p. 45</cite>
+      </blockquote>
+
+      <p>Outro ponto importante é a possibilidade de transformação da realidade a partir da proposta apresentada. Ao desenvolver um modelo sustentável de caixa de gordura, este trabalho busca não apenas apresentar uma solução técnica, mas também promover a conscientização ambiental. A adoção desse tipo de tecnologia pode contribuir significativamente para a preservação dos recursos hídricos, melhoria do sistema de saneamento e redução de custos com manutenção de redes de esgoto.</p>
+
+      <p>Outro aspecto relevante refere-se à educação ambiental da população. De acordo com o Ministério do Meio Ambiente <span class="ref">(2018)</span>, a conscientização sobre o descarte correto de resíduos é fundamental para a preservação dos recursos naturais e para a melhoria da qualidade de vida nas cidades.</p>
+
+      <p>Pesquisas na área de saneamento indicam que soluções descentralizadas e de baixo custo são essenciais para atender às demandas de cidades em crescimento. Conforme destaca Philippe Gourbesville <span class="ref">(2016)</span>, sistemas simples e adaptáveis à realidade local podem ser mais eficientes do que tecnologias complexas, especialmente em contextos urbanos em expansão.</p>
+
+      <p>Portanto, este estudo se mostra relevante por abordar um problema cotidiano e propor uma solução sustentável, de baixo custo e acessível, que possa ser aplicada em residências e pequenos estabelecimentos, contribuindo para a preservação ambiental e a melhoria do sistema de saneamento.</p>
+    </div>
+  </section>
+
+  <!-- ============ OBJETIVOS ============ -->
+  <section class="doc-section" id="objetivos">
+    <div class="doc-section__head">
+      <span class="doc-num">03</span>
+      <h2>Objetivos</h2>
+    </div>
+
+    <div class="objective-general">
+      <span class="tagline">Objetivo geral</span>
+      <p>Desenvolver um modelo de caixa de gordura sustentável, utilizando materiais de baixo impacto ambiental, com o objetivo de melhorar o tratamento de resíduos gordurosos e reduzir os impactos no sistema de esgoto e no meio ambiente.</p>
+    </div>
+
+    <span class="tagline tagline--specific">Objetivos específicos</span>
+    <div class="objective-grid">
+      <article class="objective-card">
+        <span class="objective-card__kind">Exploratório</span>
+        <p>Identificar os principais problemas causados pelo descarte inadequado de gordura nas redes de esgoto.</p>
+      </article>
+      <article class="objective-card">
+        <span class="objective-card__kind">Descritivo</span>
+        <p>Descrever as características de um modelo sustentável de caixa de gordura, considerando materiais e estrutura.</p>
+      </article>
+      <article class="objective-card">
+        <span class="objective-card__kind">Explicativo</span>
+        <p>Avaliar os benefícios ambientais e sociais da utilização de uma caixa de gordura sustentável.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ MÍDIA / REGISTRO ============ -->
+  <section class="doc-section doc-section--alt" id="midia">
+    <div class="doc-section__head">
+      <span class="doc-num">04</span>
+      <h2>Registro fotográfico e audiovisual</h2>
+    </div>
+    <p class="section-intro">
+      Espaço reservado para o material de campo — fotos do protótipo em construção, do modelo finalizado
+      e vídeos de demonstração de funcionamento. Clique em qualquer quadro abaixo para pré-visualizar um
+      arquivo do seu computador; a substituição definitiva pelos arquivos finais pode ser feita depois.
+    </p>
+
+    <div class="media-grid" id="mediaGrid">
+      <!-- media slots injected/enhanced by JS, static markup below as fallback -->
+      <div class="media-slot" data-kind="image" data-label="Materiais reutilizados">
+        <input type="file" accept="image/*" class="media-slot__input" aria-label="Adicionar foto: Materiais reutilizados">
+        <div class="media-slot__placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Foto — materiais reutilizados</span>
+        </div>
+      </div>
+
+      <div class="media-slot" data-kind="image" data-label="Protótipo em construção">
+        <input type="file" accept="image/*" class="media-slot__input" aria-label="Adicionar foto: Protótipo em construção">
+        <div class="media-slot__placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Foto — protótipo em construção</span>
+        </div>
+      </div>
+
+      <div class="media-slot media-slot--wide" data-kind="video" data-label="Demonstração de funcionamento">
+        <input type="file" accept="video/*" class="media-slot__input" aria-label="Adicionar vídeo: Demonstração de funcionamento">
+        <div class="media-slot__placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 7-14 7V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span>Vídeo — demonstração de funcionamento</span>
+        </div>
+      </div>
+
+      <div class="media-slot" data-kind="image" data-label="Modelo finalizado">
+        <input type="file" accept="image/*" class="media-slot__input" aria-label="Adicionar foto: Modelo finalizado">
+        <div class="media-slot__placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Foto — modelo finalizado</span>
+        </div>
+      </div>
+
+      <div class="media-slot" data-kind="image" data-label="Instalação no local">
+        <input type="file" accept="image/*" class="media-slot__input" aria-label="Adicionar foto: Instalação no local">
+        <div class="media-slot__placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Foto — instalação no local</span>
+        </div>
+      </div>
+    </div>
+    <p class="media-note">Nota: as pré-visualizações acontecem apenas no navegador (nada é enviado a um servidor) e não são salvas ao recarregar a página. Para publicar de forma definitiva, substitua os arquivos de espaço reservado na pasta <code>/assets</code> do projeto — veja o comentário no <code>script.js</code>.</p>
+  </section>
+
+  <!-- ============ REFERÊNCIAS ============ -->
+  <section class="doc-section" id="referencias">
+    <div class="doc-section__head">
+      <span class="doc-num">05</span>
+      <h2>Referências bibliográficas</h2>
+    </div>
+    <ol class="reference-list">
+      <li><span class="ref-author">ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS (ABNT).</span> <em>NBR 8160: Sistemas prediais de esgoto sanitário – Projeto e execução.</em> Rio de Janeiro: ABNT, 1999.</li>
+      <li><span class="ref-author">BARBIERI, José Carlos.</span> <em>Gestão ambiental empresarial: conceitos, modelos e instrumentos.</em> 3. ed. São Paulo: Saraiva, 2011.</li>
+      <li><span class="ref-author">BRASIL. Ministério do Meio Ambiente.</span> <em>Educação ambiental: princípios e práticas.</em> Brasília: MMA, 2018. Disponível em: <a href="https://www.gov.br/mma" target="_blank" rel="noopener">gov.br/mma</a>. Acesso em: 30 mar. 2026.</li>
+      <li><span class="ref-author">COMPANHIA DE SANEAMENTO BÁSICO DO ESTADO DE SÃO PAULO (SABESP).</span> <em>Manual de uso e manutenção de caixa de gordura.</em> São Paulo: SABESP, 2021. Disponível em: <a href="https://site.sabesp.com.br" target="_blank" rel="noopener">site.sabesp.com.br</a>. Acesso em: 30 mar. 2026.</li>
+      <li><span class="ref-author">GOURBESVILLE, Philippe.</span> <em>Urban water systems in transition.</em> Londres: IWA Publishing, 2016.</li>
+      <li><span class="ref-author">SACHS, Ignacy.</span> <em>Caminhos para o desenvolvimento sustentável.</em> Rio de Janeiro: Garamond, 2002.</li>
+      <li><span class="ref-author">VON SPERLING, Marcos.</span> <em>Introdução à qualidade das águas e ao tratamento de esgotos.</em> 4. ed. Belo Horizonte: UFMG, 2014.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div>
+    <span class="topbar__code">CG–SUST/2026</span>
+    <p>Caixa de Gordura Sustentável — trabalho técnico-científico, Itajaí/SC.</p>
+    <p>GRUPO: BERNARDO POFFO COLSANI, LUCAS LAMIM, VINICIUS FORMENTO</p>
+  </div>
+  <a href="#topo" class="back-to-top">voltar ao topo ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
